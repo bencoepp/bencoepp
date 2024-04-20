@@ -1,11 +1,11 @@
-name: Build and deliver backend services
+name: build and deliver image
 
 on: push
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Build and deliver backend services
+    name: Build and deliver image for the homepage
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
