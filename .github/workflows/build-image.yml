@@ -1,0 +1,23 @@
+name: Build and deliver backend services
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Build and deliver backend services
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Get next version
+        uses: reecetech/version-increment@2023.9.3
+        id: version
+        with:
+          scheme: semver
+          increment: patch
+      - name: Build image
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: "registry.bencoepp.de/bencoepp/homepage:${{ steps.version.outputs.version }}"
+          context: .
