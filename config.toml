@@ -1,0 +1,178 @@
+#-------------------------------
+# General Site Settings
+baseURL = "https://bencoepp.de"
+languageCode = "de"
+title = "Ben Coepp Publishing"
+googleAnalytics = "G-9GD31D9H6L" # Add your identifier. For example UA-99631805-1.
+paginate = 12
+
+
+#-------------------------------
+# Main Menu
+[menu]
+  [[menu.main]]
+    name = "Startseite"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+  name = "Shop"
+  url = "/shop"
+  weight = 2
+
+  [[menu.main]]
+    name = "Unsere Dienste"
+    url = "/services/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Über uns"
+    url = "/about/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Weitere"
+    weight = 5
+    hasChildren = true
+
+  [[menu.main]]
+    parent = "Weitere"
+    name = "IT-Beratung"
+    url = "/itconsulting/"
+    weight = 2
+
+  [[menu.main]]
+    parent = "Weitere"
+    name = "Ausstattung"
+    url = "/itequip/"
+    weight = 3
+
+  [[menu.main]]
+    parent = "Weitere"
+    name = "Entwicklung"
+    url = "/development/"
+    weight = 4
+
+  [[menu.main]]
+    parent = "Weitere"
+    name = "Seminare"
+    url = "/seminar/"
+    weight = 5
+
+  # Call to action button
+  [params.cta_button]
+    enable = true
+    cta_button_link = "/contact/"
+    cta_button_text = "Anfrage stellen"
+
+
+[params]
+  logo = "/images/logo.png" # You can add own logo. For example "/images/logo.png".
+  logo_dark = "/images/logo.png"
+  description = "Ben Coepp Publishing Ihr IT-Experte"
+  color_scheme = "dark" # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+
+
+  #-------------------------------
+  # Hero Settings
+  [params.hero]
+    enable = true
+    hero__title = "Ihr IT-Experte & Anlaufstelle für lokale Nachrichten"
+    hero__description = "Brauchen Sie eine neue Webseite, IT-Ausstatung oder Beratung / Seminar im Bereich IT dann sind Sie hier an der richtigen Stelle. Für alle anderen wir liefern Ihnen täglich eine Reihe von Artikeln über Ereignisse auf der ganzen Welt, Bergisch Gladbach und insbesondere der IT Welt."
+
+
+  #-------------------------------
+  # Tags Section Settings
+  [params.tags_section]
+    enable = true
+    number_posts = 3 # To control how many posts to show under each tag section, set the value to a number. Three is the default.
+    number_columns = 1 # You can specify the number of columns from 1-4 for large screen resolution. By default, the theme uses three columns grid.
+
+  [[params.tag]]
+    tag = "Bücher"
+
+  # You can add many tag sections to the homepage; each section will show the recent posts by the tag.
+
+
+  #-------------------------------
+  # Authors Section Settings
+  [params.authors_section]
+    enable = false
+    section_title = "Meet our authors"
+
+
+  #-------------------------------
+  # Footer Settings
+  [params.footer]
+    footer__description = "Wir berichten nicht nur über Nachrichten sondern stehen Ihnen gerne bei Ihren IT-Bedürfnissen zur Seite. Kontaktieren Sie uns einfach und wir Erstellen Ihnen ein unverbindlichen Angebot."
+
+  # Social Links
+
+  [[params.social]]
+    icon = "ion-logo-github"
+    name = "GitLab"
+    link = "https://gitlab.bencoepp.de"
+
+  [[params.social]]
+    icon = "ion-logo-youtube"
+    name = "Youtube"
+    link = "https://youtube.com/bencoepp"
+
+  # Example of adding a new link to the footer section:
+  # [[params.social]]
+  #   icon = "ion-logo-vimeo"
+  #   name = "Vimeo"
+  #   link = "https://vimeo.com"
+
+  # Other icons can be found at https://ionicons.com/v4/
+
+
+  # Newsletter
+  [params.mailchimp]
+    enable = true
+    mailchimp__title = "Immer auf dem neusten Stand"
+    mailchimp__description = "Treten Sie gerne unserem Newsletter bei, darüber erhalten Sie immer eine Benachrichtigung zu den neusten Nachrichten und Angeboten."
+    mailchimp__identifier = "bencoepp.us8.list-manage.com/subscribe/post?u=b9b2209539c964ea4ccb4ef44&amp;id=6574ae4838&amp;f_id=001970e0f0" # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
+    mailchimp__input__text = "Ihre Email Adresse"
+    mailchimp__button__text = "Beitreten"
+
+
+  #-------------------------------
+  # Contact Settings
+  [params.contact]
+    email = "your@email.com" # Add your form_id
+
+    # NOTE
+    # Danto comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.
+
+  #-------------------------------
+  # Comment Section (Disqus)
+  [params.disqus]
+    enable = false
+    disqusShortname = "anvod-studio-test" # Add your shortname for Disqus Comment. For example anvod-studio-test
+
+
+[taxonomies]
+  author = "authors"
+  tag = "tags"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  noClasses = false
+
+[sitemap]
+  changefreq = 'monthly'
+  filename = 'sitemap.xml'
+  priority = 0.5
