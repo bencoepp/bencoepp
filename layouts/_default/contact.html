@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<!-- begin page -->
+<div class="container">
+
+  <article class="page">
+    <div class="page__head">
+      <div class="page__info">
+        <h1 class="page__title">{{ .Title }}</h1>
+        {{ if .Params.description }}
+        <div class="page__description">{{ .Params.description }}</div>
+        {{ end }}
+      </div>
+
+      {{ if .Params.video_embed }}
+      <div class="post-video">
+        <div class="post-video__wrap">
+          <iframe src="{{ .Params.video_embed }}" loading="lazy" width="640" height="360" frameborder="0"
+            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
+      {{ else }}
+      {{ if .Params.image }}
+      <div class="post-image">
+        <img class="lazy" data-src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+
+    <div class="page__content">
+      <div class="form-box">
+        <div class="contact-head">
+        {{ if .Description }}
+          <div class="contact-description">{{ .Description }}</div>
+        {{ else }}
+          <div class="contact-description">{{ .Content }}</div>
+        {{ end }}
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</div>
+<!-- end page -->
+
+{{ end }}
