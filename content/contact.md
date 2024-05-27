@@ -7,6 +7,6 @@ Sei es nun eine neue Webseite, eine Anfrage für IT-Beratung, Seminar oder für 
 
 ### Email: allgemein@bencoepp.de
 ### Tel: 0173 4066728
-### Adr: Odenthaler Straße 107, 51465 Bergisch Gladbach
+### Adr: An der Engelsfuhr 57, 51467 Bergisch Gladbach
 
 Bitte denken Sie daran, dass wir nur ernstgemeinte Anfragen beantworten und bearbeiten werden. Bei auftretendem Spam werden Sie von unserer Seite direkt blockiert.
