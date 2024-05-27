@@ -19,5 +19,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: "registry.bencoepp.de/bencoepp/homepage:${{ steps.version.outputs.version }}"
+          tags: "registry.bencoepp.de/bencoepp/homepage:latest"
           context: .
